@@ -22,7 +22,6 @@ Source0: %{srcname}.tar.bz2
 License: GPL
 Group: System/X11
 URL: http://www.compiz-fusion.org/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: dbus-devel
 BuildRequires: compiz-devel
 BuildRequires: gettext-devel
