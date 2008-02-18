@@ -1,7 +1,7 @@
 %define name compiz-fusion-plugins-unsupported
-%define version 0.6.0
+%define version 0.6.99
 %define rel 1
-%define git 0
+%define git 20080218
 
 %if  %{git}
 %define srcname plugins-unsupported-%{git}
@@ -55,7 +55,8 @@ rm -rf %{buildroot}
 %makeinstall_std
 find %{buildroot} -name *.la -exec rm -f {} \;
 %find_lang %{name}
-
+# 3d is in -extras....
+rm -f %{buildroot}%{_libdir}/compiz/lib3d.*
 %clean
 rm -rf %{buildroot}
 
