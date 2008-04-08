@@ -1,5 +1,5 @@
 %define name compiz-fusion-plugins-unsupported
-%define version 0.7.2
+%define version 0.7.4
 %define rel 1
 %define git 0
 
