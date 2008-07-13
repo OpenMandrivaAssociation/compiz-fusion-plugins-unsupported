@@ -1,7 +1,7 @@
 %define name compiz-fusion-plugins-unsupported
-%define version 0.7.6
+%define version 0.7.7
 %define rel 1
-%define git 0
+%define git 20080713
 
 %if  %{git}
 %define srcname plugins-unsupported-%{git}
