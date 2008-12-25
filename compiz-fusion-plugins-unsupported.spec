@@ -1,14 +1,14 @@
 %define name compiz-fusion-plugins-unsupported
 %define version 0.7.8
 %define rel 1
-%define git 20080912
+%define git 0
 
-%if  %{git}
-%define srcname plugins-unsupported-%{git}
+%if %{git}
+%define srcname plugins-unsupported-%{git}.tar.lzma
 %define distname plugins-unsupported
 %define release %mkrel 0.%{git}.%{rel}
 %else
-%define srcname %{name}-%{version}
+%define srcname %{name}-%{version}.tar.bz2
 %define distname %{name}-%{version}
 %define release %mkrel %{rel}
 %endif
@@ -18,7 +18,7 @@ Summary: Compiz Fusion Unsupported Plugin Set for compiz
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{srcname}.tar.bz2
+Source0: http://releases.compiz-fusion.org/%{version}/%{srcname}
 License: GPL
 Group: System/X11
 URL: http://www.compiz-fusion.org/
@@ -34,10 +34,7 @@ Requires: compiz
 
 %description
 This is the unsupported plugin set from the Compiz Fusion community.
-
-This is a combination of the Compiz Extras and Beryl communities
-
-#----------------------------------------------------------------------------
+This is a combination of the Compiz Extras and Beryl communities.
 
 %prep
 %setup -q -n %{distname}
@@ -59,8 +56,6 @@ find %{buildroot} -name *.la -exec rm -f {} \;
 rm -f %{buildroot}%{_libdir}/compiz/lib3d.*
 %clean
 rm -rf %{buildroot}
-
-#----------------------------------------------------------------------------
 
 %files -f %{name}.lang
 %defattr(-,root,root)
