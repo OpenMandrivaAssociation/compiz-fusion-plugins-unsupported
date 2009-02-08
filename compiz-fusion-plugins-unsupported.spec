@@ -1,7 +1,7 @@
 %define name compiz-fusion-plugins-unsupported
-%define version 0.7.8
+%define version 0.8.0
 %define rel 1
-%define git 0
+%define git 20090208
 
 %if %{git}
 %define srcname plugins-unsupported-%{git}.tar.lzma
@@ -41,7 +41,7 @@ This is a combination of the Compiz Extras and Beryl communities.
 
 %build
 %if %{git}
-  # This is a CVS snapshot, so we need to generate makefiles.
+  # This is a git snapshot, so we need to generate makefiles.
   sh autogen.sh -V
 %endif
 %configure2_5x
@@ -59,6 +59,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
+%{_includedir}/compiz/compiz-elements.h
 %{_libdir}/compiz/lib*.a
 %{_libdir}/compiz/lib*.so
 %{_datadir}/compiz/*.xml
