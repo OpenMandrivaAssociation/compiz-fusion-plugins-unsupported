@@ -25,6 +25,7 @@ URL: http://www.compiz-fusion.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: dbus-devel
 BuildRequires: compiz-devel
+BuildRequires: compiz-fusion-plugins-main-devel
 BuildRequires: gettext-devel
 BuildRequires: intltool
 BuildRequires: compiz-bcop
