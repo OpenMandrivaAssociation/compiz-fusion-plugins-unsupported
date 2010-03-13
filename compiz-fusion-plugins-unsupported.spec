@@ -1,7 +1,7 @@
 %define name compiz-fusion-plugins-unsupported
 %define newname compiz-plugins-unsupported
 %define version 0.8.4
-%define rel 1
+%define rel 1.2
 %define git 0
 
 %if %{git}
