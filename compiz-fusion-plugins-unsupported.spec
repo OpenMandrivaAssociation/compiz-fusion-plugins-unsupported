@@ -22,7 +22,7 @@ Release: %{release}
 Source0: http://releases.compiz-fusion.org/%{version}/%{srcname}
 License: GPL
 Group: System/X11
-URL: http://www.compiz-fusion.org/
+URL: https://www.compiz-fusion.org/
 BuildRoot: %{_tmppath}/%{newname}-%{version}-%{release}-buildroot
 BuildRequires: dbus-devel
 BuildRequires: compiz-devel >= %{version}
