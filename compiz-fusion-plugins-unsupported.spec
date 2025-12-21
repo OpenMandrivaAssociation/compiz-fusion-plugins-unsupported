@@ -24,6 +24,11 @@ License: GPL
 Group: System/X11
 URL: https://www.compiz-fusion.org/
 BuildRoot: %{_tmppath}/%{newname}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: dbus-devel
 BuildRequires: compiz-devel >= %{version}
 BuildRequires: compiz-fusion-plugins-main-devel >= %{version}
