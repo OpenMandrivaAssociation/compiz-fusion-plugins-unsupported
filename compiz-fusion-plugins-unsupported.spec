@@ -7,11 +7,11 @@
 %if %{git}
 %define srcname plugins-unsupported-%{git}.tar.lzma
 %define distname plugins-unsupported
-%define release %mkrel 0.%{git}.%{rel}
+%define release 0.%{git}.%{rel}.1
 %else
 %define srcname %{newname}-%{version}.tar.bz2
 %define distname %{newname}-%{version}
-%define release %mkrel %{rel}
+%define release %{rel}.1
 %endif
 
 
